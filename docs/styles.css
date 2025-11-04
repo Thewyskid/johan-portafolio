@@ -109,4 +109,4 @@ details.exp > summary {
 }
 details.exp > summary::-webkit-details-marker { display:none; }
 details.exp > summary::marker { content: ""; }
-details.exp > summary::after { content: none; } /* oculta el +/− si lo agregamos antes */
+details.exp > summary::after { content: none; } /* oculta el +/− si lo agregamos antes *//* deploy */
