@@ -1,0 +1,45 @@
+<!-- docs/vital123/consentimiento.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consentimiento — Vital 123</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><span class="dot"></span> Vital 123</div>
+      <nav class="nav" id="userNav"></nav>
+    </header>
+
+    <div class="card">
+      <h1>Consentimiento informado</h1>
+      <div class="notice" style="margin-bottom:12px">
+        Declaro que he sido informada sobre el procedimiento de keratina, posibles riesgos, cuidados y contraindicaciones.
+      </div>
+      <form id="consForm" class="form">
+        <div class="input">
+          <label>
+            <input type="checkbox" id="acepto" required />
+            Acepto términos y autorizo el procedimiento.
+          </label>
+        </div>
+        <div class="input">
+          <label>Firma</label>
+          <canvas id="pad" width="500" height="160" style="border:1px solid var(--border);background:#fff"></canvas>
+          <div class="help">Dibuja tu firma con el mouse o el dedo (móvil). <button type="button" id="clear" class="btn secondary" style="margin-top:8px">Limpiar</button></div>
+        </div>
+        <button class="btn" type="submit">Enviar y confirmar</button>
+        <div class="help" id="msg"></div>
+      </form>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/consentimiento.js"></script>
+</body>
+</html>

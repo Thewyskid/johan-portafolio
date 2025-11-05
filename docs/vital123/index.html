@@ -1,0 +1,48 @@
+<!-- docs/vital123/index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vital 123 — Centro de Experiencias</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><span class="dot"></span> Vital 123</div>
+      <nav class="nav" id="userNav"></nav>
+    </header>
+
+    <div class="grid grid-2">
+      <section class="card">
+        <h1>Tu cabello, tu mejor versión</h1>
+        <p>Aplica keratinas con profesionales. Agenda tu cita, completa tu inscripción y consentimiento en minutos.</p>
+        <div style="display:flex;gap:10px;margin-top:8px">
+          <a class="btn" href="auth.html">Ingresar o Crear cuenta</a>
+          <a class="btn secondary" href="agenda.html">Agendar cita</a>
+        </div>
+      </section>
+      <section class="card">
+        <h2>¿Cómo funciona?</h2>
+        <ol class="help" style="margin:0 0 8px 18px">
+          <li>Regístrate o ingresa</li>
+          <li>Completa inscripción</li>
+          <li>Agenda fecha y hora</li>
+          <li>Firma consentimiento</li>
+          <li>Recibe confirmación por WhatsApp</li>
+        </ol>
+        <div class="notice">Colores corporativos: verde menta, blanco y salmón.</div>
+      </section>
+    </div>
+
+    <footer>© <span id="y"></span> Vital 123</footer>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="js/base.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

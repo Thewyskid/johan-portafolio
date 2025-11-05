@@ -1,0 +1,49 @@
+/* docs/vital123/assets/styles.css */
+:root{
+  --mint:#98ff98;
+  --salmon:#fa8072;
+  --bg:#ffffff;
+  --text:#1c1c1c;
+  --muted:#4a4a4a;
+  --card:#f7f9f7;
+  --border:#e6e9e6;
+  --focus: #2bb673;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+
+.container{max-width:960px;margin:auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(45deg,var(--mint),var(--salmon))}
+.nav a{margin-left:10px;text-decoration:none;color:#0b6b50}
+.nav a:hover{text-decoration:underline}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:1fr 1fr}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+
+h1{margin:6px 0 10px}
+h2{margin:0 0 12px;font-size:1.1rem;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+p{margin:0 0 10px;color:var(--muted)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 14px;border-radius:10px;border:1px solid var(--border);
+  background:var(--mint);color:#073b2b;font-weight:700;cursor:pointer;text-decoration:none
+}
+.btn.secondary{background:#fff;border-color:var(--border);color:#0b6b50}
+.btn.warn{background:var(--salmon);color:#5b1511}
+
+.form{display:grid;gap:12px}
+.input{display:grid;gap:6px}
+input,select,textarea{
+  width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#fff;color:var(--text)
+}
+input:focus,select:focus,textarea:focus{outline:3px solid color-mix(in srgb, var(--mint) 40%, transparent);border-color:var(--focus)}
+.help{font-size:.9rem;color:#7a7a7a}
+
+.notice{padding:10px 12px;border-radius:10px;background:#fff;border:1px dashed var(--border)}
+footer{margin-top:20px;color:#7a7a7a;text-align:center}
